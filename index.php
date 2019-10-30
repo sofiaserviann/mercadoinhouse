@@ -1,0 +1,185 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="utf-8">
+    <title>Mercado in house</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-propio">
+      <a class="navbar-brand" href="index.php"><img src="imagenes/logo.png" alt="" width="70px" height="70px"> Mercado in-house </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item active">
+            <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+
+          <?php if(!isset($_SESSION["inicio"])){ ?>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Ingresá <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item reg">
+              <a class="nav-link" href="registro.php">Registrate <span class="sr-only">(current)</span></a>
+            </li>
+          <?php } ?>
+
+          <?php if(isset($_SESSION["inicio"])){?>
+            <li class="nav-item">
+              <a class="nav-link" href="funciones/cerrar-sesion.php">Cerrar sesión <span class="sr-only">(current)</span></a>
+            </li>
+          <?php } ?>
+
+          <li class="nav-item">
+            <a class="nav-link" href="faq.php">Ayuda</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categorias
+            </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Indumentaria</a>
+            <a class="dropdown-item" href="#">Hogar, Muebles y Jardin</a>
+            <div class="dropdown-divider"> Jardin</div>
+            <a class="dropdown-item" href="#">Electrodomesticos</a>
+          </div>
+        </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="container-fluid">
+      <div id="slider"><marquee>
+      <img src="imagenes/vestimenta1.jpg" alt="vestimenta" width="230">
+      <img src="imagenes/vestimenta2.jpg" alt="vestimenta" width="260">
+      <img src="imagenes/vestimenta3.jpg" alt="vestimenta" width="200 ">
+      <img src="imagenes/vestimenta4.jpg" alt="vestimenta" width="260">
+      <img src="imagenes/vestimenta1.jpg" alt="vestimenta" width="230">
+      <img src="imagenes/vestimenta2.jpg" alt="vestimenta" width="260">
+      <img src="imagenes/vestimenta3.jpg" alt="vestimenta" width="200 ">
+      <img src="imagenes/vestimenta4.jpg" alt="vestimenta" width="260">
+      <img src="imagenes/vestimenta1.jpg" alt="vestimenta" width="230">
+      <img src="imagenes/vestimenta2.jpg" alt="vestimenta" width="260">
+      <img src="imagenes/vestimenta3.jpg" alt="vestimenta" width="200 ">
+      <img src="imagenes/vestimenta4.jpg" alt="vestimenta" width="260">
+      <img src="imagenes/vestimenta1.jpg" alt="vestimenta" width="230">
+      <img src="imagenes/vestimenta2.jpg" alt="vestimenta" width="260">
+      <img src="imagenes/vestimenta3.jpg" alt="vestimenta" width="200 ">
+      <img src="imagenes/vestimenta4.jpg" alt="vestimenta" width="260">
+      <img src="imagenes/vestimenta1.jpg" alt="vestimenta" width="230">
+      <img src="imagenes/vestimenta2.jpg" alt="vestimenta" width="260">
+      <img src="imagenes/vestimenta3.jpg" alt="vestimenta" width="200 ">
+      <img src="imagenes/vestimenta4.jpg" alt="vestimenta" width="260">
+      <img src="imagenes/vestimenta1.jpg" alt="vestimenta" width="230">
+      <img src="imagenes/vestimenta2.jpg" alt="vestimenta" width="260">
+      <img src="imagenes/vestimenta3.jpg" alt="vestimenta" width="200 ">
+      <img src="imagenes/vestimenta4.jpg" alt="vestimenta" width="260">
+    </marquee></div>
+
+    <div class="galeria-container container-fluid d-flex container-banner">
+      <div class="galeria col-3">
+          <a target="_blank" href="imagenes/indumentaria.jpg">
+          <img src="imagenes/indumentaria.jpg" alt="indumentaria" width="250" height="200">
+          <div class="desc">INDUMENTARIA</div>
+          <div class="desc">ver mas</div>
+          <a href="galeria.html"></a><br>
+          </a>
+    </div>
+
+        <div class="galeria col-3">
+          <a target="_blank" href="imagenes/juegodormitorio.jpg">
+            <img src="imagenes/juegodormitorio.jpg" alt="juegodormitorio" width="150" height="200">
+            <div class="desc">HOGAR, MUEBLES Y JARDIN</div>
+            <div class="desc">Ver mas</div>
+          </a>
+            </div>
+
+        <div class="galeria col-3">
+          <a target="_blank" href="imagenes/cafetera.png">
+            <img src="imagenes/cafetera.png" alt="cafetera" width="250" height="200">
+            <div class="desc">Electrodomesticos</div>
+            <div class="desc">Ver mas</div>
+          </a>
+            </div>
+
+        <div class="galeria col-3">
+          <a target="_blank" href="imagenes/celular.jpg">
+            <img src="imagenes/celular.jpg" alt="celular" width="250" height="200">
+            <div class="desc">TELEFONOS Y CELULARES</div>
+            <div class="desc">Ver mas</div>
+            </a>
+            </div>
+
+        <div class="galeria col-3">
+          <a target="_blank" href="imagenes/camaraprofesional.jpeg">
+            <img src="imagenes/camaraprofesional.jpeg" alt= "camara" width="150" height="200">
+            <div class="desc">Camaras y Accesorios</div>
+            <div class="desc">Ver mas</div>
+          </a>
+            </div>
+
+        <div class="galeria col-3">
+          <a target="_blank" href="imagenes/accesoriosparaautos.jpg">
+            <img src="imagenes/accesoriosparaautos.jpg" alt="autos" width="150" height="200">
+            <div class="desc">Autos y Accesorios</div>
+            <div class="desc">Ver mas</div>
+          </a>
+            </div>
+
+        <div class="galeria col-3">
+          <a target="_blank" href="imagenes/juegos.jpg">
+            <img src="imagenes/juegos.jpg" alt="juegos" width="150" height="200">
+            <div class="desc">Juegos y Juguetes</div>
+            <div class="desc">Ver mas</div>
+          </a>
+          </div>
+
+        <div class="galeria col-3">
+          <a target="_blank" href="imagenes/zapatillas.jpg">
+            <img src="imagenes/zapatillas.jpg" alt="zapatillas" width="150" height="200">
+            <div class="desc">Zapatillas/Zapatos</div>
+            <div class="desc">Ver mas</div>
+          </a>
+            </div>
+
+        <div class="galeria col-3">
+          <a target="_blank" href="imagenes/saludybelleza.jpg">
+            <img src="imagenes/saludybelleza.jpg" alt="saludybelleza" width="150" height="200">
+            <div class="desc">Salud y Belleza</div>
+            <div class="desc">Ver mas</div>
+          </a>
+          </div>
+
+        <div class="galeria col-3">
+          <a target="_blank" href="imagenes/arte.jpg">
+            <img src="imagenes/arte.jpg" alt="arte" width="150" height="200">
+            <div class="desc">Arte</div>
+            <div class="desc">Ver mas</div>
+          </a>
+          </div>
+      </div>
+</div>
+
+<script src="js/jquery.min.js" charset="utf-8"></script>
+<script src="js/popper.min.js" charset="utf-8"></script>
+<script src="js/bootstrap.min.js" charset="utf-8"></script>
+  </body>
+</html>

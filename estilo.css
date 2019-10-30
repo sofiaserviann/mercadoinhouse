@@ -1,0 +1,97 @@
+body {
+background-color: lightyellow;
+}
+.bg-propio{
+  background-color: lightgreen;
+}
+.galeria img {
+}
+.galeria:hover{
+  border: 2px solid #777;
+}
+div.desc{
+  margin-top: 5px;
+  text-align: center;
+  }
+.container-banner{
+  flex-flow: nowrap;
+}
+
+#texto {
+  font: bold 30px tahoma;
+  width: 100%;
+}
+#centro{
+  background-color: red;
+  width: 400px;
+  margin: 0px auto;
+  padding: 6px;
+}
+
+#parrafo {
+background-color: aqua;
+width: 300px;
+margin: 0px auto;
+padding: 10px;
+}
+.cajreg{
+background-color: lightgreen;
+padding: 20px;
+margin: 20px;
+width: 500px;
+height: 500px;
+}
+
+.faqtit{
+  padding: 40px;
+  margin: 0;
+  text-align: center;
+}
+
+.container1 ul li:hover{
+  display: inline;
+  font-family: Arial;
+   font-size: 20px;
+   text-decoration: none;
+   float: left;
+   padding: 10px;
+
+ }
+ul li{
+  display: inline;
+  font-family: Arial;
+   font-size: 15px;
+   text-decoration: none;
+   float: left;
+   padding: 10px;
+
+
+
+}
+
+
+
+ul li a{
+
+   color:#000000;
+}
+ul li a:hover{
+  color:#EAECEE;
+}
+input[type=text],[type=password]{
+  max-width: 300px;
+  min-width: 250px;
+  border: border-box;
+  border: 2px solid #ccc;
+ border-radius: 10px;
+ font-size: 15px;
+ background-color: white;
+ margin: 6px;
+ padding: 5px 15px;
+ color: #000;
+ text-align: center;
+ }
+textarea{
+  background-color: transparent;
+  border: 0 px solid;
+}
